@@ -200,6 +200,7 @@ body {
   width: 50%;
   height: 475px;
   box-shadow: -15px 0 35px rgba(0, 0, 0, 0.1), 0 -15px 35px rgba(0, 0, 0, 0.1), 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
 }
 .container .card .shoeBackground .gradients {
   position: absolute;
@@ -218,7 +219,6 @@ body {
 }
 .container .card .shoeBackground .gradients .gradient[color=blue] {
   background-image: linear-gradient(45deg, #0136af, #22abfa);
-  z-index: 0;
 }
 .container .card .shoeBackground .gradients .gradient[color=black] {
   background-image: linear-gradient(45deg, #28313b, #485461);
@@ -267,4 +267,31 @@ body {
   line-height: 0.9;
   color: #fff;
   opacity: 0.1;
+}
+
+.first {
+  z-index: 0;
+  -webkit-animation: 1s width ease;
+          animation: 1s width ease;
+}
+
+@-webkit-keyframes width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+.second {
+  z-index: -1;
 }/*# sourceMappingURL=styles.css.map */
