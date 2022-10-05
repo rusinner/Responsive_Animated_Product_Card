@@ -13,8 +13,14 @@ body{
 }
 
 .shoe {
-    display: none;
+    position: absolute;
+    width:140%;
+    opacity: 1;
+    bottom: 0;
+    right: 0;
+    transform: rotate(-20deg);
 }
+.show{opacity: 1;}
 
 .container{
     min-height: 100vh;
@@ -22,11 +28,179 @@ body{
     justify-content: center;
     align-items: center;
     padding: 40px;
+    overflow: hidden;
     .card{
         display: flex;
         justify-content: center;
         align-items: center;
         width: 860px;
+
+        .info{
+            width: 50%;
+            background-color:#fff;
+            height: 525px;
+            z-index: 1;
+            padding: 35px 40px;
+            box-shadow: -15px 0 35px rgba(0,0,0,.1),
+                         0 -15px 35px rgba(0,0,0,.1),
+                         0 15px 35px rgba(0,0,0,.1);
+
+                         .color-container{
+                            border-bottom: 1px solid #dadada;
+                            padding: 10px 0;
+                            .color{
+                                width: 25px;
+                                height: 25px;
+                                border-radius: 50%;
+                                margin: 0 10px;
+                                border: 5px solid;
+                                cursor: pointer;
+                                transition: .5s;
+                                &[color="blue"]{
+                                    background-color: #2175f5;
+                                    border-color: #2175f5;
+                                }
+                                &[color="black"]{
+                                    background-color: #030b17;
+                                    border-color: #030b17;
+                                }
+                                &[color="red"]{
+                                    background-color: #ba0e0e;
+                                    border-color: #ba0e0e;
+                                }
+                                &[color="white"]{
+                                    background-color: #f0f3f7;
+                                    border-color: #f0f3f7;
+                                }
+                                &[color="yellow"]{
+                                    background-color: #f6ff00;
+                                    border-color: #f6ff00;
+                                }
+                            }
+                            .colors{
+                                padding: 8px 0;
+                                display: flex;
+                                align-items: center;
+                                .active{
+                                    border-color:#fff ;
+                                    box-shadow: 0 0 10px .5px rgba(0,0,0,.2);
+                                    transform: scale(1.1);
+                                }
+                            }
+                         }
+                         .size-container{
+                            border-bottom: 1px solid #dadada;
+                            padding: 10px 0;
+                            margin-bottom: 10px;
+                            .sizes{
+                                padding: 8px 0;
+                                display: flex;
+                                align-items: center;
+                                .active{
+                                    background-color: var(--primary) !important;
+                                    color: #fff;
+                                }
+                                .size{
+                                    width: 40px;
+                                    height: 40px;
+                                    border-radius: 6px;
+                                    background-color: #eee;
+                                    margin: 0 10px;
+                                    text-align: center;
+                                    line-height:40px ;
+                                    font-size: 1.1rem;
+                                    font-weight: 500;
+                                    cursor: pointer;
+                                    transition: .3s;
+
+                                }
+                            }
+
+                         }
+
+                         .buy-price{
+                            padding-top: 5rem;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            .buy{
+                                padding: .7rem 1rem;
+                                background-color: var(--primary);
+                                text-decoration: none;
+                                color: #fff;
+                                text-transform: uppercase;
+                                letter-spacing: 1px;
+                                font-weight: 500;
+                                font-size: 1.1rem;
+                                transition: .5s;
+                                &:hover{
+                                    transform: scale(1.1);
+                                }
+                                i{
+                                    margin-right: 2px;
+                                }
+                            }
+                            .price{
+                                color: #333;
+                                display: flex;
+                                align-items: flex-start;
+                                h1{
+                                    font-size: 2.1rem;
+                                    font-weight: 600;
+                                    line-height: 1;
+                                }
+                                i{
+                                    font-size: 1.4rem;
+                                    margin-right: 1px;
+                                }
+                            }
+                         }
+        }
+
+        .shoeName{
+            padding: 0 0 10px 0;
+            div{
+                display: flex;
+                align-items: center;
+                .big{
+                    margin-right: 10px;
+                       font-size:2rem ;
+                       color: #333;
+                       line-height: 1;
+                }
+                .new{
+                    background-color: var(--primary);
+                    text-transform: uppercase;
+                    color: #fff;
+                    padding: 3px 10px;
+                    border-radius: 5px;
+                }
+                .small{
+                    font-weight: 400;
+                    color: #444;
+                    margin-top: 3px;
+                    text-transform: capitalize;
+                }
+                .description{
+                    border-bottom: 1px solid #dadada;
+                    padding: 10px 0;
+                    .title{
+                        color:#3a3a3a ;
+                        font-weight: 600;
+                        font-size: 1.2rem;
+                        text-transform: uppercase;
+
+                    }
+                    .text{
+                        color: #555;
+                        font-size: 17px;
+                    }
+                }
+
+            }
+        }
+        
+
         .shoeBackground{
             position: relative;
             width: 50%;
@@ -100,10 +274,13 @@ body{
                 left: 15px;
                 font-size: 5rem;
                 text-transform: uppercase;
+                line-height: .9;
+                color: #fff;
+                opacity: .1;
             }
+
+            
         }
-        .info{
-            width: 50%;
-        }
+            
     }
 }
