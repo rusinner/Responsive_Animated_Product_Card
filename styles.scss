@@ -1,5 +1,5 @@
 :root{
-    --primary:#f84848;
+    --primary:#2175f5;
 }
 
 *{
@@ -15,7 +15,7 @@ body{
 .shoe {
     position: absolute;
     width:140%;
-    opacity: 1;
+    opacity: 0;
     bottom: 0;
     right: 0;
     transform: rotate(-20deg);
@@ -224,11 +224,11 @@ body{
                 z-index: -2;
                 &[color="blue"]{
                     background-image: linear-gradient(45deg,#0136af,#22abfa);
+                    z-index: 0;
                 }
                 &[color="black"]{
                     background-image: linear-gradient(45deg,#28313b,#485461);
-                    width: 100%;
-                    z-index: 0;
+                    
                 }
                 &[color="red"]{
                     background-image: linear-gradient(45deg,#d62926,#ee625f);
