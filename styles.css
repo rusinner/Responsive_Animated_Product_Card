@@ -62,15 +62,15 @@ body {
   transition: 0.5s;
 }
 .container .card .info .color-container .color[color=blue] {
-  background-color: #2175f5;
+  background: linear-gradient(to left, #fff 50%, #2175f5 50%);
   border-color: #2175f5;
 }
 .container .card .info .color-container .color[color=black] {
-  background-color: #030b17;
+  background: linear-gradient(to left, #ba0e0e 50%, #030b17 50%);
   border-color: #030b17;
 }
 .container .card .info .color-container .color[color=red] {
-  background-color: #ba0e0e;
+  background: linear-gradient(to left, #f0f3f7 50%, #ba0e0e 50%);
   border-color: #ba0e0e;
 }
 .container .card .info .color-container .color[color=white] {
@@ -102,7 +102,7 @@ body {
   align-items: center;
 }
 .container .card .info .size-container .sizes .active {
-  background-color: var(--primary) !important;
+  background-color: var(--primary);
   color: #fff;
 }
 .container .card .info .size-container .sizes .size {
@@ -270,9 +270,9 @@ body {
 }
 
 .first {
-  z-index: 0;
-  -webkit-animation: 1s width ease;
-          animation: 1s width ease;
+  z-index: 0 !important;
+  -webkit-animation: 1.2s width ease;
+          animation: 1.2s width ease;
 }
 
 @-webkit-keyframes width {
@@ -291,7 +291,4 @@ body {
   to {
     width: 100%;
   }
-}
-.second {
-  z-index: -1;
 }/*# sourceMappingURL=styles.css.map */

@@ -41,7 +41,7 @@ body{
             height: 525px;
             z-index: 1;
             padding: 35px 40px;
-            box-shadow: -15px 0 35px rgba(0,0,0,.1),
+            box-shadow:  -15px 0 35px rgba(0,0,0,.1),
                          0 -15px 35px rgba(0,0,0,.1),
                          0 15px 35px rgba(0,0,0,.1);
 
@@ -57,15 +57,15 @@ body{
                                 cursor: pointer;
                                 transition: .5s;
                                 &[color="blue"]{
-                                    background-color: #2175f5;
+                                    background: linear-gradient(to left,#fff 50%,#2175f5 50%);
                                     border-color: #2175f5;
                                 }
                                 &[color="black"]{
-                                    background-color: #030b17;
+                                    background: linear-gradient(to left,#ba0e0e 50%,#030b17 50%);
                                     border-color: #030b17;
                                 }
                                 &[color="red"]{
-                                    background-color: #ba0e0e;
+                                    background: linear-gradient(to left,#f0f3f7 50%,#ba0e0e 50%,);
                                     border-color: #ba0e0e;
                                 }
                                 &[color="white"]{
@@ -97,7 +97,7 @@ body{
                                 display: flex;
                                 align-items: center;
                                 .active{
-                                    background-color: var(--primary) !important;
+                                    background-color: var(--primary);
                                     color: #fff;
                                 }
                                 .size{
@@ -240,7 +240,7 @@ body{
                 &[color="yellow"]{
                     background-image: linear-gradient(45deg,#ffdd00,#fbb034);
                 }
-                }
+              }
                 
             }
             .logo{
@@ -287,10 +287,13 @@ body{
 }
 
 .first{
-    z-index: 0;
-    animation: 1s width ease;
+    z-index: 0 !important;
+    animation: 1.2s width ease;
     
 }
+// .second{
+//     z-index:-1;
+// }
 
 @keyframes width{
     from{
@@ -301,6 +304,3 @@ body{
     }
 }
 
-.second{
-    z-index: -1;
-}
