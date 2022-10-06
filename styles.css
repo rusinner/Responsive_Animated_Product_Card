@@ -275,6 +275,10 @@ body {
           animation: 1.2s width ease;
 }
 
+.second {
+  z-index: -1;
+}
+
 @-webkit-keyframes width {
   from {
     width: 0;
