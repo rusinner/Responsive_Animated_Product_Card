@@ -4,6 +4,9 @@ const colors = document.querySelectorAll('.color');
 const shoes = document.querySelectorAll('.shoe');
 const gradients = document.querySelectorAll('.gradient');
 const shoeBG = document.querySelector('.shoeBackground');
+let prevColor = 'blue';
+let animationEnd = true;
+
 
 
 
@@ -16,8 +19,8 @@ function changeSize(){
 
 //change color on click
 function changeColor(){
-let animationEnd = true;
-let prevColor = 'blue';
+
+
     if (!animationEnd) return;
 let primary = this.getAttribute('primary');
 let color = this.getAttribute('color');
@@ -25,7 +28,7 @@ let shoe = document.querySelector(`.shoe[color="${color}"]`);
 let gradient = document.querySelector(`.gradient[color="${color}"]`);
 let prevGradient = document.querySelector(`.gradient[color="${prevColor}"]`);
 
-
+    if (color == prevColor) return;
     colors.forEach(c => c.classList.remove('active'));
     this.classList.add('active');
 
@@ -36,9 +39,8 @@ let prevGradient = document.querySelector(`.gradient[color="${prevColor}"]`);
 
     gradients.forEach(g => g.classList.remove('first','second'));
     gradient.classList.add('first');
-    gradient.classList.remove('second');
     prevGradient.classList.add('second');
-
+    
     prevColor = color;
     animationEnd = false;
 
